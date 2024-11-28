@@ -292,24 +292,41 @@ Now, clear the values in the registers $3-$5 to zero,
  either by directly entering the zeroes or by clicking the clear button in the register dialog 
  and reentering the value 3 for register $2.
 </p>
-You may want to inspect the write inputs and the outputs of the <u>register file</u>,so click on them once to get the labels.<br>
-<br>
-Start the simulation again, and you will see the processor calculating nonsense, because the result from the LW instruction is not written to the register file on time.<br>
-<br>
-Alternatively, instead of moving the NOPs, you can use the opcode-arrow <img src="bm2.bmp" title="bm2.bmp"> to modify the order of execution: To do so, simulate in single step mode using the step-button <img src="bm9.bmp" title="bm9.bmp">, and right after the first step drag the opcode-arrow from the first NOP directly onto the ADD-instruction, thus omitting the NOPs from execution.<br>
-<br>
+<p>
+You may want to inspect the write inputs and the outputs of the <u>register file</u>,
+ so click on them once to get the labels.
+</p>
+<p>
+Start the simulation again, and you will see the processor calculating nonsense, 
+because the result from the LW instruction is not written to the register file on time.
+</p>
+<p>
+Alternatively, instead of moving the NOPs, you can use the opcode-arrow <img src="bm2.bmp" title="bm2.bmp"> to modify 
+the order of execution: To do so, simulate in single step mode using 
+the step-button <img src="bm9.bmp" title="bm9.bmp">, 
+and right after the first step drag the opcode-arrow from the first NOP directly onto the ADD-instruction, 
+thus omitting the NOPs from execution.
+</p>
+<p>
 With the presented features, you can write your own programs and examine what the pipeline does.<br>
-There are also some more examples (demo1 - demo3) you may want to try out.<br>
-<br>
-The contents of the instruction and data memories as well as the content of the register file may be saved/loaded separately by clicking the save/load buttons. LOAD/SAVE from the FILE menu loads/saves the contents of all three of them.<br>
-<br>
+There are also some more examples (demo1 - demo3) you may want to try out.
+</p>
+<p>
+The contents of the instruction and data memories as well as the content of the register file may be saved/loaded 
+separately by clicking the save/load buttons. 
+LOAD/SAVE from the FILE menu loads/saves the contents of all three of them.
+</p>
 
 <p><hr><p>
-<sup>+</sup><font size="2"><br>
-<sup>#</sup><img src="bm0.bmp" title="bm0.bmp"></font><font face="CG Times"> <font face="Arial"><font size="3"><span id="main-window">The main window</span><u><font size="4"><br>
-</font></u></font></font></font><font size="2"><br>
-<span style="font-size:9pt">The main window ist mostly occupied by the processor schematic. It shows the five stages (labeled right above) of the processor, each reduced to the most relevant architectural units : the<u> PC</u></span></font>, the <u>instruction</u> an <u>data</u> memory, the <u>ALU</u>, the <u>main control unit</u>, the <u>register file</u> each separated by <u>latches</u>.<br>
-<br>
+
+<h3 id="main-window"><img src="bm0.bmp" title="bm0.bmp" class="section-image">The main window</h3>
+
+<p>The main window ist mostly occupied by the processor schematic. 
+    It shows the five stages (labeled right above) of the processor, 
+    each reduced to the most relevant architectural units : 
+    the <u>PC</u>, the <u>instruction</u> and <u>data</u> memory, 
+    the <u>ALU</u>, the <u>main control unit</u>, the <u>register file</u> each separated by <u>latches</u>.
+</p>
 <br>
 <img src="bm12.bmp" title="bm12.bmp"> The listbox to the left of the schematic shows the content of the instruction memory as an assembler program. The listbox scrolls up as the simulation goes on, and the instructions move into the pipeline, each in the corresponding color.<br>
 The arrow-symbol <img src="bm2.bmp" title="bm2.bmp"> marks the line where the opcodes leave the listbox. By dragging it at the right edge it can be moved up and down the listbox, thus making it possible to determine how many of the previous and following lines of code should be visible. It can also be used to select the next opcode to enter the pipeline. Note: The opcode arrow does not scroll along with the listbox content. So, upon scrolling the listbox, you may have to adjust its position.<br>
