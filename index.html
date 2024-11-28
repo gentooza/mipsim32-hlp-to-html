@@ -5,15 +5,23 @@
         body {
             max-width:1250px;
         }
-        body,table,td {
+        body, table, td {
             font-size:14px; 
             font-family: Arial, Helvetica, sans-serif;
         }
         h3 {
             font-weight: bold;
+            font-size:16px;
         }
         .section-image {
             padding-right: 5px;
+        }
+        .text-address {
+            font-size: 9px;
+        }
+        .text-code {
+            font-family: monospace;
+            font-size: 15px;
         }
     </style>
 
@@ -58,44 +66,28 @@
 				about MIPSims processor schematic and its components
 			<ul>
 				<li><u>Arithmetic Logic Unit</u></li>
+                <li><u>Adder</u></li>
+                <li><u>Constant Value</u></li>
+                <li><u>Instruction Memory</u></li>
+                <li><u>Data Memory</u></li>
+                <li><u>Register</u></li>
+                <li><u>And Gate</u></li>
+                <li><u>Sign Extension Unit</u></li>
+                <li><u>Multiplexor</u></li>
+                <li><u>Control Unit</u></li>
+                <li><u>Latch</u></li>
+                <li><u>Program Counter</u></li>
 			</ul>
 		</ul>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<u>Arithmetic Logic Unit</u><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<u>Adder</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Constant Value</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Instruction Memory</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Data Memory</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Register</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>And Gate</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Sign Extension Unit</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Multiplexor</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Control Unit</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Latch</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<u>Program Counter</u><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <p><hr><p>
-<br>
+
 <h3 id="about-MIPSIM"> <img src="bm0.bmp" title="bm0.bmp" class="section-image">About MIPSim</h3>
-<font size="2"><br>
-<span style="font-size:9pt">MIPSim is intended to be a supplement to the book:<br>
-<br>
-</span></font><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p>MIPSim is intended to be a supplement to the book:</p>
+<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Computer Organization an Design<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-The Hardware/Software Interface<br>
-</b>
+The Hardware/Software Interface
+</b></p>
 <p>by <b>John L. Hennessy</b> and <b>David A. Patterson</b>.</p>
 <p>
     While this book is an excellent introduction to the basics of computer architecture, experience shows that many students, especially those coming from less hardware-oriented studies, encounter difficulties in understanding the consequences and even concepts of pipelining. Presenting the dynamic process of instructions floating through a pipeline using cycle diagrams often appears somewhat clumsy to students with little or no previous knowledge of computer architecture and digital logic design.
@@ -106,25 +98,25 @@ The Hardware/Software Interface<br>
     The user can write small programs (although currently there is only a subset of the MIPS instruction set implemented) and watch the pipeline doing its work, modify the program and the content of data memory and register file 'on the fly' and go on simulating to see the effects.<br>
 </p>
 <br>
-<img data="bm1.bmp" title="bm1.bmp">
+<img src="bm1.bmp" title="bm1.bmp">
 <p>
     Vienna University of Technology<br>
     Institut für Technische Informatik<br>
     Prof. Herbert Grünbacher
 </p>
-<span style="font-size:6pt"><br>
-<font size="1">Treitlstraße 3/182-2<br>
+<p class="text-address">
+Treitlstraße 3/182-2<br>
 A-1040 Vienna/Austria<br>
-<span style="font-size:6pt"><br>
-<font size="1">Tel.: +43 (1) 58801 - 8150 Fax.: +43 (1) 5869697<br>
+<br>
+Tel.: +43 (1) 58801 - 8150 Fax.: +43 (1) 5869697<br>
 <a href="mailto:hg@vlsivie.tuwien.ac.at" target="_blank"> email: hg@vlsivie.tuwien.ac.at</a><br>
 <a href="http://www.vlsivie.tuwien.ac.at/welcome.html" target="_blank"> http://www.vlsivie.tuwien.ac.at/welcome.html</a><br>
-<font size="2"><br>
-</font></font></span></font></span></font><br>
+</p>
 
 <p><hr><p>
-<h3 id="getting-started"><img data="bm0.bmp" title="bm0.bmp" class="section-image">Getting started</h3>
-<p style="font-size:9pt">If you should encounter problems in running this program, please see chapter 9:<a href="#troubleshooting">Troubleshooting</a></p>
+
+<h3 id="getting-started"><img src="bm0.bmp" title="bm0.bmp" class="section-image">Getting started</h3>
+<p>If you should encounter problems in running this program, please see chapter 9: <a href="#troubleshooting">Troubleshooting</a></p>
 <p>
     For a quick test of the programs functionality, there is an example program to demonstrate the simulator.<br>
     To load it:
@@ -145,10 +137,10 @@ A-1040 Vienna/Austria<br>
     The listbox at the left of the schematic should contain some opcodes.
 </p>
 <p>
-    To start the simulation, first drag the opcode-arrow <img data="bm2.bmp" title="bm2.bmp"> at the arrow on its right side onto the first opcode (in case it isn't already there) to instruct MIPSim it should start with this one (this symbol indicates the line at which the opcodes leave the listbox).
+    To start the simulation, first drag the opcode-arrow <img src="bm2.bmp" title="bm2.bmp"> at the arrow on its right side onto the first opcode (in case it isn't already there) to instruct MIPSim it should start with this one (this symbol indicates the line at which the opcodes leave the listbox).
 </p>
 <p>
-    Now click on the Simulation-Start button <img data="bm3.bmp" title="bm3.bmp"> or select SIMULATION from the main menu and then START from the drop-down menu.
+    Now click on the Simulation-Start button <img src="bm3.bmp" title="bm3.bmp"> or select SIMULATION from the main menu and then START from the drop-down menu.
 </p>
 <p>
     You should now see the instructions 'floating' through the pipeline, i.e. being shifted through the top line of the schematic. Each instruction entering the pipeline has a certain color assigned, and the buses and connections are continually redrawn in the same color to reflect the 'flow' of the corresponding signals.
@@ -156,85 +148,91 @@ A-1040 Vienna/Austria<br>
 <p>
     If the pipeline works, you can start with the <a href="#tutorial">tutorial</a>. In case of troubles see chapter 9: <a href="#troubleshooting">Troubleshooting</a>.
 </p>
-<font size="3"><br>
+
 <p><hr><p>
-<sup>+</sup></font><font face="CG Times"><font size="2"><br>
-<sup>#</sup><font face="Arial"><img data="bm0.bmp" title="bm0.bmp"><font size="3"><span id="tutorial">Tutorial</span><u><font size="4"><br>
-</font></u></font></font></font></font><font size="2"><br>
-<span style="font-size:9pt">This tutorial provides a brief introduction to simulating with MIPSim.<br>
-<br>
-When you start MIPSim, <u><a href="#main-window">the main window</a></u></span></font> pops up.<br>
-You see the the schematic of the processor with all buses in grey, indicating that their state is undefined as no instructions are in the pipeline.<br>
-<br>
-There are three special symbols within the schematic:<br>
+
+<h3 id="tutorial"><img src="bm0.bmp" title="bm0.bmp" class="section-image">Tutorial</h3>
+<p>This tutorial provides a brief introduction to simulating with MIPSim.</p>
+
+<p>When you start MIPSim, <a href="#main-window">the main window</a> pops up.<br>
+You see the the schematic of the processor with all buses in grey, indicating that their state is undefined as no instructions are in the pipeline.</p>
+
+<p>There are three special symbols within the schematic:<br>
 The instruction memory (labeled <i>instr.</i>), the register file (<i>register</i>), and the data memory (<i>data</i>).<br>
-Clicking on one of these symbols opens a dialog which lets you modify its contents.<br>
-<br>
-<img data="bm4.bmp" title="bm4.bmp">To enter a small program, click on the instruction memory symbol within the schematic.<br>
-<br>
-<a href="#assembler-window"><u>The assembler window</u></a> appears.<br>
+Clicking on one of these symbols opens a dialog which lets you modify its contents.</p>
+
+<p><img src="bm4.bmp" title="bm4.bmp"> To enter a small program, click on the instruction memory symbol within the schematic.</p>
+
+<p><a href="#assembler-window">The assembler window</a> appears.<br>
 After clicking on a field within the opcode-column, it receives the caret and you can edit its contents.<br>
-Now click on the topmost field in the opcode-column and type:<br>
-<br>
-LW $1,0($0)<br>
-<br>
-then press &lt;ENTER&gt;.<br>
-MIPSim performs a syntax-check, and if the input is correct, the caret is set to the next line (within the opcode column).<br>
-<br>
-Now try an incorrect input, for example:<br>
-<br>
+Now click on the topmost field in the opcode-column and type:</p>
+<p class="text-code">
+LW $1,0($0)
+</p>
+
+<p>then press <i>&gt;ENTER&gt;</i>.<br>
+MIPSim performs a syntax-check, and if the input is correct, the caret is set to the next line (within the opcode column).</p>
+
+<p>Now try an incorrect input, for example:</p>
+<p class="text-code">
 ADD $1&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-(correct opcode, but wrong parameter format)<br>
-<br>
-On&lt;ENTER&gt;, a window pops up, stating that the input was syntactically incorrect and, as MIPSim recognizes the ADD opcode, displaying the expected format.<br>
-<br>
+(correct opcode, but wrong parameter format)
+</p>
+
+<p>On<i>&gt;ENTER&gt;</i>, a window pops up, stating that the input was syntactically incorrect and, as MIPSim recognizes the ADD opcode, displaying the expected format.</p>
+
+<p>
 In case of an incorrect input, the caret remains within the current field and the text is selected for overwrite to let you correct its contents.<br>
-If you clear the input with the &lt;DEL&gt; key and press &lt;ENTER&gt;, MIPSim reverts to the instruction that was previously entered for this memory location. If you enter a single blank, MIPSim replaces the instruction with a NOP.<br>
- <br>
-<br>
-Now please enter the following lines immediately below the LW $1,0($0):<br>
-<br>
+If you clear the input with the <i>&lt;DEL&gt;</i> key and press <i>&lt;ENTER&gt;</i>, MIPSim reverts to the instruction that was previously entered for this memory location. If you enter a single blank, MIPSim replaces the instruction with a NOP.
+</p>
+
+<p>
+Now please enter the following lines immediately below the LW $1,0($0):
+</p>
+
+<p class="text-code">
 NOP<br>
 NOP<br>
 NOP<br>
 ADD $3,$1,$2<br>
 SUB $4,$1,$2<br>
 OR $5,$1,$2<br>
-<br>
-<br>
-Click on the close-button, and the assembler dialog disappears.<br>
-<br>
+</p>
+
+<p>
+Click on the close-button, and the assembler dialog disappears.
+</p>
+<p>
 Back in <a href="#main-window">the main window</a>, you should see the previously entered assembler statements listed in the listbox to the left of the schematic (maybe you need to scroll up to see the top line).<br>
-<br>
-This listbox also contains the opcode arrow <img data="bm2.bmp" title="bm2.bmp">, which indicates the line where the opcodes leave the listbox to enter the pipeline. Make sure it is positioned on the first line (the LW-instruction); if necessary, drag it at its right edge.<br>
-<br>
+This listbox also contains the opcode arrow <img src="bm2.bmp" title="bm2.bmp">, which indicates the line where the opcodes leave the listbox to enter the pipeline. Make sure it is positioned on the first line (the LW-instruction); if necessary, drag it at its right edge.<br>
 The short example program loads a value from the data memory into register $1 and then performs some operations based on the values in registers $1 and $2. Therefore we need to enter the initial values for those registers.<br>
-<br>
 The value for register $1 is loaded from the data memory, so we have to put a value into the appropriate memory location.<br>
-<br>
-<img data="bm5.bmp" title="bm5.bmp">The contents of the data memory can be examined and modified in a similar way as with the instruction memory, namely by clicking on the data memory symbol (labeled <i>data</i>).<br>
-<br>
-The <u>data window</u> pops up:<br>
-<br>
-<br>
-The listbox shows the data memorys contents. You may modify any of the words, just click on it and edit the text. The numbers are always given in hexadecimal format.<br>
+<img src="bm5.bmp" title="bm5.bmp">The contents of the data memory can be examined and modified in a similar way as with the instruction memory, namely by clicking on the data memory symbol (labeled <i>data</i>).<br>
+The <a href="#data-window">data window</a> pops up:<br>
+</p>
+<p>
+The listbox shows the data memory's contents. You may modify any of the words, just click on it and edit the text. The numbers are always given in hexadecimal format.<br>
 So, click on the leftmost value within the first line, which is the data word at address 0, and enter 5. Then click on the close-button, and the data dialog should disappear.<br>
-<font size="3"><br>
-<span style="font-size:9pt"><img data="bm6.bmp" title="bm6.bmp">The value for register $2 must be entered directly into the register. To do so, click on the register file.<br>
-</span></font><br>
-The <u>register window</u> pops up:<br>
-<br>
+</p>
+<p>
+<img src="bm6.bmp" title="bm6.bmp">The value for register $2 must be entered directly into the register. To do so, click on the register file.<br>
+The <a href="#register-window">register window</a> pops up:<br>
+</p>
+<p>
 You see editable fields for each register (except $0, which is hardwired to 0).<br>
-Click on the value of $2 and enter 3 and hit &lt;RETURN&gt; (again, values are given in hexadecimal).<br>
-<br>
-Now, we have the initial values for the two registers we use. You could close the register window now (by clicking on the close-button in the upper right corner, by clicking on the register button in the toolbar, or by clicking on the register file symbol within the schematic. However, to provide the opportunity of watching the registers contents change on running a program, you can also keep the register dialog open. Just resize it so that the registers youre interested in are visible and move the dialog to an appropriate place.<br>
-<br>
+Click on the value of $2 and enter 3 and hit <i>&lt;RETURN&gt;</i> (again, values are given in hexadecimal).<br>
+</p>
+<p>
+Now, we have the initial values for the two registers we use. You could close the register window now (by clicking on the close-button in the upper right corner, by clicking on the register button in the toolbar, or by clicking on the register file symbol within the schematic. However, to provide the opportunity of watching the registers contents change on running a program, you can also keep the register dialog open. Just resize it so that the registers youre interested in are visible and move the dialog to an appropriate place.
+</p>
+<p>
 Make sure the opcode arrow is positioned on the first line (the LW-instruction); if necessary, drag it at its right edge.<br>
 Now we are ready to start the simulation.<br>
-<br>
-So, click on the play-button <img data="bm3.bmp" title="bm3.bmp">. The first instruction should immediately shift into the pipeline, and you should see the signals on the buses in the same color as the opcode appearing in the line above the schematic. In play mode, you can watch the signals propagate on the buses. Slow mode <img data="bm7.bmp" title="bm7.bmp"> and fast mode <img data="bm8.bmp" title="bm8.bmp"> offer different signal propagation speeds. However, if you just want to see the results of each step, you can use the step-button <img data="bm9.bmp" title="bm9.bmp">.<br>
-<br>
+</p>
+<p>
+So, click on the play-button <img src="bm3.bmp" title="bm3.bmp">. The first instruction should immediately shift into the pipeline, and you should see the signals on the buses in the same color as the opcode appearing in the line above the schematic. In play mode, you can watch the signals propagate on the buses. Slow mode <img data="bm7.bmp" title="bm7.bmp"> and fast mode <img data="bm8.bmp" title="bm8.bmp"> offer different signal propagation speeds. However, if you just want to see the results of each step, you can use the step-button <img src="bm9.bmp" title="bm9.bmp">.<br>
+</p>
 When the instructions reach the write-back stage, the register contents should be updated accordingly in the register dialog.<br>
 <br>
 Wait until the last instruction has shifted through the pipeline (only NOPs left in the top line), then stop the pipeline by clicking on the stop button <img data="bm10.bmp" title="bm10.bmp">. The listbox scrolls back up to the first opcode and all buses now appear in grey indicating an undefined state.<br>
