@@ -30,7 +30,7 @@
 </head>
 <body>
 	<div id='divhlpmain'>
-		<img data="bm0.bmp" title="bm0.bmp">
+		<img src="bm0.bmp" title="bm0.bmp">
 		Table of Contents:<br>
 		<ul>
 			<li><a href="#about-MIPSIM">1. <u>About MIPSim</u></span> </a>:
@@ -231,7 +231,7 @@ Make sure the opcode arrow is positioned on the first line (the LW-instruction);
 Now we are ready to start the simulation.<br>
 </p>
 <p>
-So, click on the play-button <img src="bm3.bmp" title="bm3.bmp">. The first instruction should immediately shift into the pipeline, and you should see the signals on the buses in the same color as the opcode appearing in the line above the schematic. In play mode, you can watch the signals propagate on the buses. Slow mode <img data="bm7.bmp" title="bm7.bmp"> and fast mode <img data="bm8.bmp" title="bm8.bmp"> offer different signal propagation speeds. However, if you just want to see the results of each step, you can use the step-button <img src="bm9.bmp" title="bm9.bmp">.<br>
+So, click on the play-button <img src="bm3.bmp" title="bm3.bmp">. The first instruction should immediately shift into the pipeline, and you should see the signals on the buses in the same color as the opcode appearing in the line above the schematic. In play mode, you can watch the signals propagate on the buses. Slow mode <img src="bm7.bmp" title="bm7.bmp"> and fast mode <img src="bm8.bmp" title="bm8.bmp"> offer different signal propagation speeds. However, if you just want to see the results of each step, you can use the step-button <img src="bm9.bmp" title="bm9.bmp">.<br>
 </p>
 <p>
 When the instructions reach the write-back stage, the register contents should be updated accordingly in the register dialog.
@@ -296,7 +296,7 @@ You may want to inspect the write inputs and the outputs of the <u>register file
 <br>
 Start the simulation again, and you will see the processor calculating nonsense, because the result from the LW instruction is not written to the register file on time.<br>
 <br>
-Alternatively, instead of moving the NOPs, you can use the opcode-arrow <img data="bm2.bmp" title="bm2.bmp"> to modify the order of execution: To do so, simulate in single step mode using the step-button <img data="bm9.bmp" title="bm9.bmp">, and right after the first step drag the opcode-arrow from the first NOP directly onto the ADD-instruction, thus omitting the NOPs from execution.<br>
+Alternatively, instead of moving the NOPs, you can use the opcode-arrow <img src="bm2.bmp" title="bm2.bmp"> to modify the order of execution: To do so, simulate in single step mode using the step-button <img src="bm9.bmp" title="bm9.bmp">, and right after the first step drag the opcode-arrow from the first NOP directly onto the ADD-instruction, thus omitting the NOPs from execution.<br>
 <br>
 With the presented features, you can write your own programs and examine what the pipeline does.<br>
 There are also some more examples (demo1 - demo3) you may want to try out.<br>
@@ -306,45 +306,45 @@ The contents of the instruction and data memories as well as the content of the 
 
 <p><hr><p>
 <sup>+</sup><font size="2"><br>
-<sup>#</sup><img data="bm0.bmp" title="bm0.bmp"></font><font face="CG Times"> <font face="Arial"><font size="3"><span id="main-window">The main window</span><u><font size="4"><br>
+<sup>#</sup><img src="bm0.bmp" title="bm0.bmp"></font><font face="CG Times"> <font face="Arial"><font size="3"><span id="main-window">The main window</span><u><font size="4"><br>
 </font></u></font></font></font><font size="2"><br>
 <span style="font-size:9pt">The main window ist mostly occupied by the processor schematic. It shows the five stages (labeled right above) of the processor, each reduced to the most relevant architectural units : the<u> PC</u></span></font>, the <u>instruction</u> an <u>data</u> memory, the <u>ALU</u>, the <u>main control unit</u>, the <u>register file</u> each separated by <u>latches</u>.<br>
 <br>
 <br>
-<img data="bm12.bmp" title="bm12.bmp"> The listbox to the left of the schematic shows the content of the instruction memory as an assembler program. The listbox scrolls up as the simulation goes on, and the instructions move into the pipeline, each in the corresponding color.<br>
-The arrow-symbol <img data="bm2.bmp" title="bm2.bmp"> marks the line where the opcodes leave the listbox. By dragging it at the right edge it can be moved up and down the listbox, thus making it possible to determine how many of the previous and following lines of code should be visible. It can also be used to select the next opcode to enter the pipeline. Note: The opcode arrow does not scroll along with the listbox content. So, upon scrolling the listbox, you may have to adjust its position.<br>
+<img src="bm12.bmp" title="bm12.bmp"> The listbox to the left of the schematic shows the content of the instruction memory as an assembler program. The listbox scrolls up as the simulation goes on, and the instructions move into the pipeline, each in the corresponding color.<br>
+The arrow-symbol <img src="bm2.bmp" title="bm2.bmp"> marks the line where the opcodes leave the listbox. By dragging it at the right edge it can be moved up and down the listbox, thus making it possible to determine how many of the previous and following lines of code should be visible. It can also be used to select the next opcode to enter the pipeline. Note: The opcode arrow does not scroll along with the listbox content. So, upon scrolling the listbox, you may have to adjust its position.<br>
 <br>
 <br>
 Above the schematic, right below the caption of the main window, there is the toolbar:<br>
 <br>
 It gives quick access to the most common commands, namely (from left to right):<br>
 <br>
-<img data="bm13.bmp" title="bm13.bmp"> Open the <a href="#assembler-window">assembler window.</a><br>
-<img data="bm14.bmp" title="bm14.bmp"> Open the register window.<br>
-<img data="bm15.bmp" title="bm15.bmp"> Open the data memory window.<br>
+<img src="bm13.bmp" title="bm13.bmp"> Open the <a href="#assembler-window">assembler window.</a><br>
+<img src="bm14.bmp" title="bm14.bmp"> Open the register window.<br>
+<img src="bm15.bmp" title="bm15.bmp"> Open the data memory window.<br>
 <br>
-<img data="bm11.bmp" title="bm11.bmp"> Remove all labels from the schematic.<br>
+<img src="bm11.bmp" title="bm11.bmp"> Remove all labels from the schematic.<br>
 <br>
-<img data="bm3.bmp" title="bm3.bmp"> Start the simulation.<br>
-<img data="bm16.bmp" title="bm16.bmp"> Pause the simulation.<br>
-<img data="bm10.bmp" title="bm10.bmp"> Stop the simulation.<br>
-<img data="bm8.bmp" title="bm8.bmp"> Simulate fast.<br>
-<img data="bm7.bmp" title="bm7.bmp"> Simulate slow.<br>
-<img data="bm9.bmp" title="bm9.bmp"> Perform a single step.<br>
+<img src="bm3.bmp" title="bm3.bmp"> Start the simulation.<br>
+<img src="bm16.bmp" title="bm16.bmp"> Pause the simulation.<br>
+<img src="bm10.bmp" title="bm10.bmp"> Stop the simulation.<br>
+<img src="bm8.bmp" title="bm8.bmp"> Simulate fast.<br>
+<img src="bm7.bmp" title="bm7.bmp"> Simulate slow.<br>
+<img src="bm9.bmp" title="bm9.bmp"> Perform a single step.<br>
 <br>
-<img data="bm17.bmp" title="bm17.bmp"> Print the current schematic state (including labels).<br>
-<img data="bm18.bmp" title="bm18.bmp"> Display the about dialog.<br>
-<img data="bm19.bmp" title="bm19.bmp"> Display this online help.<br>
+<img src="bm17.bmp" title="bm17.bmp"> Print the current schematic state (including labels).<br>
+<img src="bm18.bmp" title="bm18.bmp"> Display the about dialog.<br>
+<img src="bm19.bmp" title="bm19.bmp"> Display this online help.<br>
 <br>
 <p><hr><p>
 <sup>+</sup><font size="2"><br>
-<sup>#</sup><font size="1"><img data="bm13.bmp" title="bm13.bmp"><font size="3"><span id="assembler-window">The assembler window</span><u><font size="4"><br>
+<sup>#</sup><font size="1"><img src="bm13.bmp" title="bm13.bmp"><font size="3"><span id="assembler-window">The assembler window</span><u><font size="4"><br>
 </font></u></font></font></font><font size="2"><br>
 <span style="font-size:9pt">Within the assembler window, you can enter and modify the contents of the program memory.<br>
 It can be opened in one of three ways:<br>
 </span></font><br>
 1. Via the main menu by selecting INSTRUCTION MEMORY/VIEW.<br>
-2. By clicking on the assembler button <img data="bm13.bmp" title="bm13.bmp"> in the toolbar<br>
+2. By clicking on the assembler button <img src="bm13.bmp" title="bm13.bmp"> in the toolbar<br>
 3. Or by clicking on the symbol labeled instruction memory within the schematic.<br>
 <br>
 <br>
@@ -368,52 +368,52 @@ When you enter an opcode in the opcode-column, MIPSim automatically performs a s
 The listbox on the right shows the available instructions as well as their syntax (this is just informational; selecting instructions will <i>not</i> copy them to the assembler listbox).<br>
 <br>
 <br>
-The OK button <img data="bm20.bmp" title="bm20.bmp"> closes the window.<br>
+The OK button <img src="bm20.bmp" title="bm20.bmp"> closes the window.<br>
 <br>
-With the clear all button <img data="bm21.bmp" title="bm21.bmp">, the instruction memory content may be reset to contain all zeroes, ie. NOPs.<br>
+With the clear all button <img src="bm21.bmp" title="bm21.bmp">, the instruction memory content may be reset to contain all zeroes, ie. NOPs.<br>
 <br>
 The load button opens a file dialog displaying all previously saved programs in the active path (*.mp).<br>
 To load one, double-click it or select it and click the OK button.<br>
 <br>
-Click <img data="bm22.bmp" title="bm22.bmp"> if you want to save the current program to disk. In the file dialog, enter the name to be used and click ok (or press ENTER). MIPSim will ask for confirmation if the given file already exists.<br>
+Click <img src="bm22.bmp" title="bm22.bmp"> if you want to save the current program to disk. In the file dialog, enter the name to be used and click ok (or press ENTER). MIPSim will ask for confirmation if the given file already exists.<br>
 <p><hr><p>
 <sup>+</sup><font size="2"><br>
-<sup>#</sup><font size="1"><img data="bm15.bmp" title="bm15.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">The data window<u><font size="4"><br>
+<sup>#</sup><font size="1"><img src="bm15.bmp" title="bm15.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">The data window<u><font size="4"><br>
 </font></u></font></font></font></font><font size="2"><br>
 <span style="font-size:9pt">This window may be used to display and modify the contents of the data memory.<br>
 It can be opened in one of three ways:<br>
 </span></font><br>
 1. Via the main menu by selecting DATA MEMORY and then VIEW from the popup menu.<br>
-2. By clicking on the data memory button <img data="bm15.bmp" title="bm15.bmp"> in the toolbar<br>
+2. By clicking on the data memory button <img src="bm15.bmp" title="bm15.bmp"> in the toolbar<br>
 3. Or by clicking on the symbol labeled data memory within the schematic.<br>
 <br>
 The listbox contains four columns of data words a line, each preceded by the adress of the first data word. You can edit any data word by clicking on it. Number format is hexadecimal.<br>
 <br>
-The OK button <img data="bm20.bmp" title="bm20.bmp"> closes the window.<br>
+The OK button <img src="bm20.bmp" title="bm20.bmp"> closes the window.<br>
 <br>
-With the clear all button <img data="bm21.bmp" title="bm21.bmp">, the data memory content may be reset to contain all zeroes.<br>
+With the clear all button <img src="bm21.bmp" title="bm21.bmp">, the data memory content may be reset to contain all zeroes.<br>
 <br>
 The load button opens a file dialog displaying all previously saved memory files (*.md).<br>
 To load one, double-click it or select it and click the OK button.<br>
 <br>
-Click <img data="bm22.bmp" title="bm22.bmp"> if you want to save the current data memory content to disk. In the file dialog, enter the name to be used and click ok (or press ENTER).<br>
+Click <img src="bm22.bmp" title="bm22.bmp"> if you want to save the current data memory content to disk. In the file dialog, enter the name to be used and click ok (or press ENTER).<br>
 <p><hr><p>
 <sup>+</sup><font size="2"><br>
-<sup>#</sup><font size="1"><img data="bm14.bmp" title="bm14.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">The register window<u><font size="4"><br>
+<sup>#</sup><font size="1"><img src="bm14.bmp" title="bm14.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">The register window<u><font size="4"><br>
 </font></u></font></font></font></font><font size="2"><br>
-<span style="font-size:9pt"><img data="bm23.bmp" title="bm23.bmp">This window displays the contents of the registers and lets you modify them by clicking on a value.<br>
+<span style="font-size:9pt"><img src="bm23.bmp" title="bm23.bmp">This window displays the contents of the registers and lets you modify them by clicking on a value.<br>
 It can be opened in one of three ways:<br>
 <br>
 1. Via the main menu by selecting REGISTERS and VIEW from the popup-menu.<br>
-2. By clicking on the registers button <img data="bm14.bmp" title="bm14.bmp"> in the toolbar<br>
+2. By clicking on the registers button <img src="bm14.bmp" title="bm14.bmp"> in the toolbar<br>
 3. Or by clicking on the symbol labeled register file within the schematic.<br>
 <br>
 <br>
-Click the load button <img data="bm24.bmp" title="bm24.bmp"> to open a file dialog in which you can select a *.mr-file containing previously saved register contents.<br>
+Click the load button <img src="bm24.bmp" title="bm24.bmp"> to open a file dialog in which you can select a *.mr-file containing previously saved register contents.<br>
 <br>
-The clear button <img data="bm25.bmp" title="bm25.bmp"> resets all registers contents to zero.<br>
+The clear button <img src="bm25.bmp" title="bm25.bmp"> resets all registers contents to zero.<br>
 <br>
-By clicking the save button <img data="bm26.bmp" title="bm26.bmp">, you may enter a filename under which the current register contents are saved.<br>
+By clicking the save button <img src="bm26.bmp" title="bm26.bmp">, you may enter a filename under which the current register contents are saved.<br>
 <br>
 <br>
 <p><hr><p>
@@ -424,7 +424,7 @@ The schematic is then printed along with the opcode line above it. It is automat
 </span></font><font face="CG Times"><font size="2"><br>
 <p><hr><p>
 <sup>+</sup></font></font><br>
-<sup>#</sup><font face="Arial"><font size="1"><img data="bm27.bmp" title="bm27.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">Troubleshooting<u><font size="4"><br>
+<sup>#</sup><font face="Arial"><font size="1"><img src="bm27.bmp" title="bm27.bmp"></font></font><font face="CG Times"><font size="2"> <font face="Arial"><font size="3">Troubleshooting<u><font size="4"><br>
 </font></u></font></font></font></font><font size="3"><br>
 <span style="font-size:9pt">Known problems:<br>
 <br>
@@ -465,7 +465,7 @@ There should also be some more files containing some example programs. However, 
 If this does not fix the problem contact:<br>
 <br>
 <font size="2"><br>
-</font><font size="1"><img data="bm1.bmp" title="bm1.bmp">Vienna University of Technology<br>
+</font><font size="1"><img src="bm1.bmp" title="bm1.bmp">Vienna University of Technology<br>
 Institut für Technische Informatik<br>
 Prof. Herbert Grünbacher<br>
 <span style="font-size:6pt"><br>
@@ -669,7 +669,7 @@ function proc_loadimg(){
 	var a=document.getElementsByTagName('IMG');	
 	for(var i = 0; i < a.length; i++){ 
 		if(a[i].src)continue;
-		data=a[i].getAttribute('data');
+		src=a[i].getAttribute('data');
 		if(!data)continue;
 		c=getOffset(a[i]);
 		if (c.top>=dt && c.top<=db){
