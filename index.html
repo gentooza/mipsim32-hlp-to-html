@@ -65,7 +65,7 @@
 			<li><a href="#schematic">11.<u>The schematic</u>:</a>
 				about MIPSims processor schematic and its components
 			<ul>
-				<li><u>Arithmetic Logic Unit</u></li>
+				<li><a href="#schematic-alu">Arithmetic Logic Unit</a></li>
                 <li><u>Adder</u></li>
                 <li><u>Constant Value</u></li>
                 <li><u>Instruction Memory</u></li>
@@ -233,39 +233,65 @@ Now we are ready to start the simulation.<br>
 <p>
 So, click on the play-button <img src="bm3.bmp" title="bm3.bmp">. The first instruction should immediately shift into the pipeline, and you should see the signals on the buses in the same color as the opcode appearing in the line above the schematic. In play mode, you can watch the signals propagate on the buses. Slow mode <img data="bm7.bmp" title="bm7.bmp"> and fast mode <img data="bm8.bmp" title="bm8.bmp"> offer different signal propagation speeds. However, if you just want to see the results of each step, you can use the step-button <img src="bm9.bmp" title="bm9.bmp">.<br>
 </p>
-When the instructions reach the write-back stage, the register contents should be updated accordingly in the register dialog.<br>
+<p>
+When the instructions reach the write-back stage, the register contents should be updated accordingly in the register dialog.
+</p>
+<p>
+Wait until the last instruction has shifted through the pipeline (only NOP's left in the top line), 
+ then stop the pipeline by clicking on the stop button <img src="bm10.bmp" title="bm10.bmp">.
+ The listbox scrolls back up to the first opcode and all buses now appear in grey indicating an undefined state.
 <br>
-Wait until the last instruction has shifted through the pipeline (only NOPs left in the top line), then stop the pipeline by clicking on the stop button <img data="bm10.bmp" title="bm10.bmp">. The listbox scrolls back up to the first opcode and all buses now appear in grey indicating an undefined state.<br>
-<br>
-The results should be in the registers $3,$4, and $5.<br>
-<br>
-<br>
-<br>
-We have watched the signals shift through the pipeline stages and got the expected results in the registers.<br>
-<br>
-Now, lets take a closer look at the pipelines work.<br>
-<br>
+The results should be in the registers $3,$4, and $5.
+</p>
+<p>
+We have watched the signals shift through the pipeline stages and got the expected results in the registers.
+</p>
+<p>
+Now, let's take a closer look at the pipeline's work.
+</p>
+<p>
 Make sure the program is reset and the opcode arrow is located at the first instruction (LW).<br>
-Now click once onto the step-button within the toolbar <img data="bm9.bmp" title="bm9.bmp">.<br>
-<br>
+Now click once onto the step-button within the toolbar <img src="bm9.bmp" title="bm9.bmp">.
+</p>
+<p>
 The LW-instruction enters the instruction fetch (IF) stage of the pipeline.<br>
-Click repeatedly on the step-button until the ADD-instruction is in the execution stage (EX).<br>
-<br>
-MIPSim enables you to inspect the current state of each bus. Click (with the left mouse button), for example, once on each of the two <u>ALU</u>-inputs and once on the ALU-output.<br>
-For each of the buses, a label pops up, displaying the current state of the bus in hexadecimal, and the value of the output bus should be the sum of the values of the input buses.<br>
+Click repeatedly on the step-button until the ADD-instruction is in the execution stage (EX).
+</p>
+<p>
+MIPSim enables you to inspect the current state of each bus. Click (with the left mouse button),
+ for example, once on each of the two <a href="#schematic-alu">ALU</a>-inputs and once on the ALU-output.<br>
+For each of the buses, a label pops up, displaying the current state of the bus in hexadecimal,
+ and the value of the output bus should be the sum of the values of the input buses.<br>
 Likewise, you can inspect any other bus within the schematic.<br>
-<br>
-Now click once again on the step-button. The labels are updated automatically when the state of the bus changes. So, when simulating, you can activate the labels on the buses you are interested in and MIPSim updates the values as the instructions shift along.<br>
-<br>
+</p>
+<p>
+Now click once again on the step-button. The labels are updated automatically when the state of the bus changes.
+ So, when simulating, you can activate the labels on the buses you are interested in and 
+ MIPSim updates the values as the instructions shift along.
+</p>
+<p>
 To hide a label, just click once on it, and it disappears.<br>
-Alternatively, by clicking on the clear labels button <img data="bm11.bmp" title="bm11.bmp">, all labels can be removed.<br>
-<br>
-<br>
-In this example, we have three NOPs after the load instruction. Their purpose is to delay the execution of the commands referencing the loaded value until the registers are updated accordingly. Now lets see what would happen without them:<br>
-Mark the ADD, SUB and OR instructions, i.e. click the left mouse button on the line containing the ADD statement (preferably within the address column) and move the mouse to the line with the OR statement, then release the mouse button. These three lines should appear in red. Now, drag them up right behind the LW instruction: click the <i>right</i> mouse button on one of the marked instructions and move the mouse up. MIPSim draws an insertion mark where the lines will be inserted upon releasing the mouse button. So, move the mouse up until the insertion mark is right behind the LW instructions and then release the mouse button.<br>
-<br>
-Now, clear the values in the registers $3-$5 to zero, either by directly entering the zeroes or by clicking the clear button in the register dialog and reentering the value 3 for register $2.<br>
-<br>
+Alternatively, by clicking on the clear labels button <img src="bm11.bmp" title="bm11.bmp">,
+ all labels can be removed.
+</p>
+<p>
+In this example, we have three NOPs after the load instruction.
+ Their purpose is to delay the execution of the commands referencing the loaded value until the registers
+ are updated accordingly. Now lets see what would happen without them:<br>
+Mark the ADD, SUB and OR instructions, i.e. click the left mouse button on the line containing the ADD statement
+ (preferably within the address column) and move the mouse to the line with the OR statement,
+ then release the mouse button. These three lines should appear in red. Now, 
+ drag them up right behind the LW instruction: click the <i>right</i> mouse button
+ on one of the marked instructions and move the mouse up. 
+ MIPSim draws an insertion mark where the lines will be inserted upon releasing the mouse button. 
+ So, move the mouse up until the insertion mark is right behind the LW instructions and then release 
+ the mouse button.
+</p>
+<p>
+Now, clear the values in the registers $3-$5 to zero, 
+ either by directly entering the zeroes or by clicking the clear button in the register dialog 
+ and reentering the value 3 for register $2.
+</p>
 You may want to inspect the write inputs and the outputs of the <u>register file</u>,so click on them once to get the labels.<br>
 <br>
 Start the simulation again, and you will see the processor calculating nonsense, because the result from the LW instruction is not written to the register file on time.<br>
